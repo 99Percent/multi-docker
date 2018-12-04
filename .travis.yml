@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build - 99percent/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t 99percent/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run 99percent/react-test npm test -- --coverage
